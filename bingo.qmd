@@ -1,0 +1,22 @@
+---
+title: "Bingo"
+format: html
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(gt)
+```
+
+```{r echo=FALSE,message=FALSE,results="asis"}
+t<-seq(1:40)
+for(i in t) {
+  cat("  \n###",  i, "  \n")
+  cat(round(runif(5)*100,0), "  \n")
+  cat(round(runif(5)*100,0), "  \n")
+  cat(round(runif(2)*100,0), "⚾",round(runif(2)*100,0) ," \n")
+  cat(round(runif(5)*100,0), "  \n")
+  cat(round(runif(5)*100,0), "  \n")
+  cat("  \n")
+}
+```
